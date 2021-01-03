@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="container">
+  <br>
+<div class="row">
+  <div class=" col-md-12 col-sm-28">
+    <div class="card" *ngFor="let b of book" >
+      <div class="card-body">
+
+       <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a book">-->
+        <h2 class="card-title">Title: {{b.title}}</h2>
+        <h3 class="card-subtitle">Author: {{b.author}}</h3>
+        <p class="card-text">Price : {{b.price}} Euro</p>
+        <p class="card-link" (click)="openDialog(b)">Add to cart</p><br>
+        <button mat-stroked-button [routerLink]="['/update/',b.id]" color="primary">Edit</button>
+          <button mat-stroked-button (click)="delete(b.id)" color="warn">Delete</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+</div>
